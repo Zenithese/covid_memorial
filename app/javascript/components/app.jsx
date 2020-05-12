@@ -11,7 +11,7 @@ import {
 const App = () => {
     return (
         <div>
-            <Header />
+            <Route path="/" component={Header} />
             <Switch>
                 <Memorial path="/memorial"/>
                 <Register path="/"/>

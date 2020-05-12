@@ -1,0 +1,2 @@
+class Mourner < ApplicationRecord
+end

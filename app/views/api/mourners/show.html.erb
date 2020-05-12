@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @mourner.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @mourner.last_name %>
+</p>
+
+<p>
+  <strong>Employer:</strong>
+  <%= @mourner.employer %>
+</p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @mourner.job_title %>
+</p>
+
+<p>
+  <strong>Union:</strong>
+  <%= @mourner.union %>
+</p>
+
+<%= link_to 'Edit', edit_mourner_path(@mourner) %> |
+<%= link_to 'Back', mourners_path %>

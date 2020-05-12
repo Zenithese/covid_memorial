@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import dummy from './dummy_reducer'
+import workers from './worker_reducer'
 
 export default combineReducers({
-    dummy
+    workers
 });
