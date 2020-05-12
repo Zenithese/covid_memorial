@@ -126,7 +126,7 @@ function Register(props) {
                                     </div>
                                 </div>
                             </label>
-                            <br />
+                            {/* <br /> */}
                             <label>
                                 Name of their employer
                                 <br />
