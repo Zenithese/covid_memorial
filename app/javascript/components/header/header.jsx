@@ -25,9 +25,11 @@ export default function Header(props) {
 
     return (
         <header>
-            <h1>{header}</h1>
-            <p>{statement}</p>
-            <NavLink to={path} onClick={() => setClick(!click)}>{link}</NavLink>
+            <div className="header-content">
+                <h1 className="header-title">{header}</h1>
+                <p>{statement}</p>
+                <NavLink to={path} onClick={() => setClick(!click)}>{link}</NavLink>
+            </div>
         </header>
     )
 }

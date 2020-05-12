@@ -18,7 +18,10 @@ export const receiveErrors = errors => ({
 export const register = data => dispatch => {
     return (
         APIUtil.register(data).then(data => (
-            dispatch(receiveRegistration(data))
+            dispatch(
+                // receiveRegistration(data)
+                // window.location.href(`${window.location.origin}/#/memorial`)
+            )
         ), err => (
             dispatch(receiveErrors(err.responseJSON))
         ))

@@ -29,14 +29,14 @@ function Register(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const worker = Object.assign({}, {
+        const worker = {
             first_name: workerFirstName,
             last_name: workerLastName,
             union: workerUnion,
             employer: workerEmployer,
             job_title: workerJobTitle,
             message
-        })
+        }
         const mourner = {
             first_name: mournerFirstName,
             last_name: mournerLastName,
@@ -53,10 +53,10 @@ function Register(props) {
     }
 
     return (
-        <div>
+        <div className="registration">
             <h1>Submit:</h1>
-            <form onSubmit={handleSubmit}>
-                <div style={{display: "flex"}}>
+            <form className="register-form" onSubmit={handleSubmit}>
+                <div className="register-fields">
                     <div>
                         <h2>About You:</h2>
                         <label>

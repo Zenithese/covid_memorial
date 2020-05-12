@@ -22,21 +22,30 @@ function Memorial(props) {
     }, []);
 
     return (
-        <ul>
+        <div className="memorial">
             {props.workers ? 
                 props.workers.map((worker, i) => (
-                    <li key={`worker-${i}`}>
-                        <div className="card">
-                            <h2>{worker.first_name} {worker.last_name}</h2>
+                    <div className="card" key={`worker-${i}`}>
+                        <div className="card-top">
+                            <img src={'https://seedie.s3.amazonaws.com/comp_vii.jpg'} />
+                            <div className="card-top-left">
+                                <p>{worker.union}</p>
+                                <h4 className="worker-title">{worker.first_name} {worker.last_name}</h4>
+                                <p>{worker.job_title}</p>
+                                <p>{worker.employer}</p>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div className="container">
                             <br/>
                             <p>{worker.message}</p>
                         </div>
-                    </li>
+                    </div>
                 )) 
                 :
                 null
             }
-        </ul>
+        </div>
     )
 }
 
