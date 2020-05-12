@@ -57,86 +57,108 @@ function Register(props) {
             <h1>Submit:</h1>
             <form className="register-form" onSubmit={handleSubmit}>
                 <div className="register-fields">
-                    <div>
-                        <h2>About You:</h2>
-                        <label>
-                            Your Name:
+                    <div className="register-left">
+                        <div className="register-inner">
+                            <h2>About You:</h2>
+                            <label>
+                                Your Name:
+                                <br />
+                                <div className="register-name-fields">
+                                    <div>
+                                        <input type="text" name="first_name" value={mournerFirstName} onChange={(e) => setMournerFirstName(e.target.value)} />
+                                        <label className="register-name-labels" for="first_name">First Name</label>
+                                    </div>
+                                    <div>
+                                        <input type="text" name="last_name" value={mournerLastName} onChange={(e) => setMournerLastName(e.target.value)} />
+                                        <label className="register-name-labels" for="last_name">Last Name</label>
+                                    </div>
+                                </div>
+                            </label>
                             <br />
-                            <input type="text" name="first_name" value={mournerFirstName} onChange={(e) => setMournerFirstName(e.target.value)}/>
-                            <input type="text" name="last_name" value={mournerLastName} onChange={(e) => setMournerLastName(e.target.value)}/>
-                        </label>
-                        <br />
-                        <label>
-                            Are you in a union? If so, which one
+                            <label>
+                                Are you in a union? If so, which one
+                                <br />
+                                <select id="unions" name="mournerUnions" value={mournerUnion} onChange={(e) => setMournerUnion(e.target.value)}>
+                                    <option value="Teamsters">Teamsters</option>
+                                    <option value="SEIU">SEIU</option>
+                                    <option value="UNITE">UNITE</option>
+                                    <option value="AFL-CIO">AFL-CIO</option>
+                                </select>
+                            </label>
                             <br />
-                            <select id="unions" name="mournerUnions" value={mournerUnion} onChange={(e) => setMournerUnion(e.target.value)}>
-                                <option value="Teamsters">Teamsters</option>
-                                <option value="SEIU">SEIU</option>
-                                <option value="UNITE">UNITE</option>
-                                <option value="AFL-CIO">AFL-CIO</option>
-                            </select>
-                        </label>
-                        <br />
-                        <label>
-                            What is the name of your employer
+                            <label>
+                                What is the name of your employer
+                                <br />
+                                <input type="text" name="mournerEmployer" value={mournerEmployer} onChange={(e) => setMournerEmployer(e.target.value)}/>
+                            </label>
                             <br />
-                            <input type="text" name="mournerEmployer" value={mournerEmployer} onChange={(e) => setMournerEmployer(e.target.value)}/>
-                        </label>
-                        <br />
-                        <label>
-                            What is your job title
-                            <br />
-                            <input type="text" name="jobTitle" value={mournerJobTitle} onChange={(e) => setMournerJobTitle(e.target.value)}/>
-                        </label>
+                            <label>
+                                What is your job title
+                                <br />
+                                <input type="text" name="jobTitle" value={mournerJobTitle} onChange={(e) => setMournerJobTitle(e.target.value)}/>
+                            </label>
+                        </div>
                     </div>
 
-                    <div>
-                        <h2>Person who passed away:</h2>
-                        <label htmlFor="photo">
-                            Their Picture:
+                    <div className="register-right">
+                        <div className="register-inner">
+                            <h2>Person who passed away:</h2>
+                            <label htmlFor="photo">
+                                Their Picture:
+                                <br />
+                                <div class="upload-btn-wrapper">
+                                    {/* <label className="register-upload-button" for="photo">Upload Picture</label> */}
+                                    <input className="register-photo-input" type="file" id="photo" name="photo" />
+                                </div>
+                            </label>
                             <br />
-                            <input type="file" id="photo" name="photo" />
-                        </label>
-                        <br />
-                        <label>
-                            Their Name:
+                            <label>
+                                Their Name:
+                                <br />
+                                <div className="register-name-fields">
+                                    <div>
+                                        <input type="text" name="first_name" value={workerFirstName} onChange={(e) => setWorkerFirstName(e.target.value)}/>
+                                        <label className="register-name-labels" for="first_name">First Name</label>
+                                    </div>
+                                    <div>
+                                        <input type="text" name="last_name" value={workerLastName} onChange={(e) => setWorkerLastName(e.target.value)}/>
+                                        <label className="register-name-labels" for="last_name">Last Name</label>
+                                    </div>
+                                </div>
+                            </label>
                             <br />
-                            <input type="text" name="first_name" value={workerFirstName} onChange={(e) => setWorkerFirstName(e.target.value)}/>
-                            <input type="text" name="last_name" value={workerLastName} onChange={(e) => setWorkerLastName(e.target.value)}/>
-                        </label>
-                        <br />
-                        <label>
-                            Name of their employer
+                            <label>
+                                Name of their employer
+                                <br />
+                                <input type="text" name="workerEmployer" value={workerEmployer} onChange={(e) => setWorkerEmployer(e.target.value)} />
+                            </label>
                             <br />
-                            <input type="text" name="workerEmployer" value={workerEmployer} onChange={(e) => setWorkerEmployer(e.target.value)} />
-                        </label>
-                        <br />
-                        <label>
-                            Job Title
+                            <label>
+                                Job Title
+                                <br />
+                                <input type="text" name="workerJobTitle" value={workerJobTitle} onChange={(e) => setWorkerJobTitle(e.target.value)}/>
+                            </label>
                             <br />
-                            <input type="text" name="workerJobTitle" value={workerJobTitle} onChange={(e) => setWorkerJobTitle(e.target.value)}/>
-                        </label>
-                        <br />
-                        <label>
-                            Union Representing
+                            <label>
+                                Union Representing
+                                <br />
+                                <select id="unions" name="workerUnions" value={workerUnion} onChange={(e) => setWorkerUnion(e.target.value)}>
+                                    <option value="Teamsters">Teamsters</option>
+                                    <option value="SEIU">SEIU</option>
+                                    <option value="UNITE">UNITE</option>
+                                    <option value="AFL-CIO">AFL-CIO</option>
+                                </select>
+                            </label>
                             <br />
-                            <select id="unions" name="workerUnions" value={workerUnion} onChange={(e) => setWorkerUnion(e.target.value)}>
-                                <option value="Teamsters">Teamsters</option>
-                                <option value="SEIU">SEIU</option>
-                                <option value="UNITE">UNITE</option>
-                                <option value="AFL-CIO">AFL-CIO</option>
-                            </select>
-                        </label>
-                        <br />
-                        <label>
-                            Honor them here
-                            <br />
-                            <textarea type="textbox" name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
-                        </label>
+                            <label>
+                                Honor them here
+                                <br />
+                                <textarea type="textbox" name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
+                            </label>
+                        </div>
                     </div>
                 </div>
-                <br/>
-                <input type="submit" value="Submit" />
+                <input className="register-submit-button" type="submit" value="Submit" />
             </form>
         </div>
     )

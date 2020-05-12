@@ -25,11 +25,12 @@
 
  body {
     margin: 0;
+    font-family: 'Dosis', sans-serif;
  }
 
  header {
     text-align: center;
-    background-color: orange;
+    background-color: black;
     height: 190px;
 }
 
@@ -40,6 +41,11 @@
 
 .header-title {
     margin-top: 0;
+    color: white;
+}
+
+.header-statement {
+    color: white;
 }
 
 .registration {
@@ -48,11 +54,107 @@
 
 .register-form {
     display: inline-block;
+    background-color: black;
+    border-radius: 11px;
+    margin-bottom: 37px;
 }
 
 .register-fields {
     display: flex;
     text-align: left;
+    border: solid 7px black;
+    border-radius: 18px;
+    background-color: black;
+}
+
+.register-left {
+    border-radius: 10px; /* 5px rounded corners */
+    border: solid 5px black;
+    background-color: white;
+    width: 50%;
+}
+
+.register-right {
+    border-radius: 10px; /* 5px rounded corners */
+    border: solid 5px black;
+    background-color: white;
+    width: 50%;
+}
+
+.register-inner {
+    margin: 10px;
+}
+
+.register-name-fields {
+    display: flex;
+}
+
+.register-name-labels {
+    font-size: 9px;
+}
+
+/* .upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.register-upload-button {
+  border: 2px solid orange;
+  color: orange;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: bold;
+} */
+
+input[type=text] {
+    height: 18px;
+}
+
+.upload-btn-wrapper input[type=file]::-webkit-file-upload-button {
+    border-radius: 30px;
+    border: solid 2px #bd4014;
+    width: 120px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: #bd4014;
+}
+
+.register-submit-button {
+    border-radius: 30px;
+    border: 0;
+    width: 120px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #32bb69;
+    color: white;
+}
+
+.nav-button {
+    border-radius: 30px;
+    border: 0;
+    width: 120px;
+    height: 25px;
+    background-color: #bd4014;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 17px;
+    right: 19%;
+    padding-top: 5px;
+}
+
+.nav-button:hover {
+    background-color: #bd4014;
+}
+
+select {
+    width: 100%;
+    border: none;
+    height: 18px;
 }
 
 .memorial {
@@ -116,7 +218,7 @@ hr {
 }
 
 footer {
-    background-color: blueviolet;
+    background-color: #bd4014;
     height: 100px;
     text-align: center;
 }

@@ -26,10 +26,10 @@ export default function Header(props) {
     return (
         <header>
             <div className="header-content">
+                <NavLink style={{ textDecoration: "none", color: "white" }} className="nav-button" to={path} onClick={() => setClick(!click)}>{link}</NavLink>
                 <h1 className="header-title">{header}</h1>
-                <p>{statement}</p>
-                <NavLink to={path} onClick={() => setClick(!click)}>{link}</NavLink>
-            </div>
+                <p className="header-statement">{statement}</p>
+                </div>
         </header>
     )
 }
